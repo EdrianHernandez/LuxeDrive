@@ -1,7 +1,4 @@
-
-import { Car, Feature } from './types';
-
-export const FLEET: Car[] = [
+export const FLEET = [
   {
     id: '1',
     name: 'Lamborghini Huracán',
@@ -44,7 +41,7 @@ export const FLEET: Car[] = [
   }
 ];
 
-export const FEATURES: Feature[] = [
+export const FEATURES = [
   {
     id: '1',
     title: 'Unlimited Mileage',
