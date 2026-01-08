@@ -1,8 +1,7 @@
-
 import React, { useRef, useState, useEffect } from 'react';
 import { FLEET } from '../constants';
 
-const SkeletonCard: React.FC = () => (
+const SkeletonCard = () => (
   <div className="flex-shrink-0 w-[420px] bg-[#151515] rounded-[2.5rem] overflow-hidden border border-[#ffffff0a] animate-pulse">
     <div className="h-64 bg-[#1a1a1a]"></div>
     <div className="p-10">
@@ -23,8 +22,8 @@ const SkeletonCard: React.FC = () => (
   </div>
 );
 
-const FleetCarousel: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+const FleetCarousel = () => {
+  const scrollRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const FleetCarousel: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction) => {
     if (scrollRef.current) {
       const { scrollLeft, clientWidth } = scrollRef.current;
       const scrollTo = direction === 'left' ? scrollLeft - clientWidth / 2 : scrollLeft + clientWidth / 2;
