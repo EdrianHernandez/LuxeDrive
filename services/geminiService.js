@@ -1,9 +1,8 @@
-
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
-export const getCarRecommendation = async (userPreference: string) => {
+export const getCarRecommendation = async (userPreference) => {
   try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
@@ -11,11 +10,11 @@ export const getCarRecommendation = async (userPreference: string) => {
       config: {
         responseMimeType: "application/json",
         responseSchema: {
-          type: Type.OBJECT,
+          type: "object",
           properties: {
-            carName: { type: Type.STRING },
-            reasoning: { type: Type.STRING },
-            styleMatch: { type: Type.STRING }
+            carName: { type: "string" },
+            reasoning: { type: "string" },
+            styleMatch: { type: "string" }
           },
           required: ["carName", "reasoning", "styleMatch"]
         }
