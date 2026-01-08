@@ -1,17 +1,15 @@
-
 import React, { useState } from 'react';
 import { LOCATIONS } from '../constants';
-import { BookingDetails } from '../types';
 
-const BookingForm: React.FC = () => {
-  const [details, setDetails] = useState<BookingDetails>({
+const BookingForm = () => {
+  const [details, setDetails] = useState({
     pickupLocation: LOCATIONS[0],
     returnLocation: LOCATIONS[0],
     pickupDate: '',
     returnDate: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Searching for cars in ${details.pickupLocation} from ${details.pickupDate} to ${details.returnDate}`);
   };
