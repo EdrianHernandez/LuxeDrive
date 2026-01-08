@@ -1,4 +1,3 @@
-
 import React from 'react';
 import FleetCarousel from './components/FleetCarousel';
 import BookingForm from './components/BookingForm';
@@ -6,7 +5,7 @@ import FeaturesList from './components/FeaturesList';
 import TrustBar from './components/TrustBar';
 import SmartAssistant from './components/SmartAssistant';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-[#d4af37] selection:text-black">
       {/* Navigation */}
@@ -82,7 +81,7 @@ const App: React.FC = () => {
         <section className="py-28 px-6">
           <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#d4af37] via-[#f1d06e] to-[#d4af37] rounded-[3.5rem] p-12 md:p-20 text-black relative overflow-hidden group shadow-2xl">
             <div className="absolute right-0 top-0 h-full w-1/3 opacity-10 group-hover:scale-110 transition-transform duration-1000">
-               <i className="fa-solid fa-car-rear text-[350px] absolute -right-24 -top-24 rotate-12"></i>
+                <i className="fa-solid fa-car-rear text-[350px] absolute -right-24 -top-24 rotate-12"></i>
             </div>
             <div className="relative z-10 max-w-2xl">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 uppercase tracking-tighter leading-tight">Ready to take the wheel?</h2>
