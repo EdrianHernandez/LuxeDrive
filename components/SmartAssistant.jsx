@@ -1,11 +1,10 @@
-
 import React, { useState } from 'react';
 import { getCarRecommendation } from '../services/geminiService';
 
-const SmartAssistant: React.FC = () => {
+const SmartAssistant = () => {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
-  const [recommendation, setRecommendation] = useState<{carName: string, reasoning: string, styleMatch: string} | null>(null);
+  const [recommendation, setRecommendation] = useState(null);
 
   const handleAsk = async () => {
     if (!query.trim()) return;
